@@ -25,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-      return view('home');
+
+      $content = \DB::table('content')->get();
+      return view('welcome', ['content'=>$content]);
+
     }
 
     public function create()
@@ -35,10 +38,13 @@ class HomeController extends Controller
 
     public function store(Request $request) {
 
-      $content= new Content;
+      $content = new Content;
       $content->title = $request->title;
       $content->info = $request->info;
+
       $content->save();
+
+      redirect()->back;
 
     }
 

@@ -10,7 +10,7 @@
 
         {{csrf_field()}}
 
-        <input type="text" name="title" value="title">
+        <input type="text" name="title">
 
         <textarea name="info" rows="8" cols="80"></textarea>
 

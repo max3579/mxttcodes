@@ -68,16 +68,28 @@
 
           <div class="content">
 
-            <h3></h3>
-            <img src="">
-            <p></p>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/create">Create</a>
+            <hr>
+            <div class="">
+              <a href="/edit">Edit</a>
+
+              @foreach($content as $c)
+              <div class="data">
+
+              <a href="/edit">Edit</a>
+              <h3>{{$c->title}}</h3>
+              <p>{{$c->info}}</p>
+
+              </div>
+              @endforeach
+            </div>
+
 
           </div>
 
-          <a href="/login">Login</a>
-          <a href="/register">Register</a>
-          <a href="/create">Create</a>
-          <a href="/edit">Edit</a>
+
 
         </div>
     </body>
